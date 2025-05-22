@@ -567,3 +567,28 @@ nav {
   gap: 2rem;
   flex-wrap: wrap;
 }
+.floating-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating-contact a {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.floating-contact a:hover {
+  background-color: #0056b3;
+}
+
