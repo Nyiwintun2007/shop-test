@@ -596,7 +596,7 @@ nav {
   color: #333;
   line-height: 1.8;
   font-weight: 500;
-  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background: lightblue;
   padding: 20px;
   border-left: 6px solid #007bff;
   border-radius: 8px;
