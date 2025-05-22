@@ -591,4 +591,20 @@ nav {
 .floating-contact a:hover {
   background-color: #0056b3;
 }
+.section__description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  font-weight: 500;
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  padding: 20px;
+  border-left: 6px solid #007bff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.section__description:hover {
+  transform: scale(1.02);
+}
 
