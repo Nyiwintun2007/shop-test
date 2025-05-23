@@ -40,8 +40,14 @@
 }
 
 .section__description {
-  font-size: 1.1rem;
-  color: var(--text-light);
+  background-color: #ffe8e8;   /* light red-pink background */
+  padding: 16px;               /* space inside the box */
+  border-left: 6px solid #ff4d4f;  /* red accent line on the left */
+  border-radius: 10px;         /* rounded corners */
+  font-weight: 500;            /* make text slightly bolder */
+  color: #333;                 /* text color (dark gray) */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* soft shadow */
+  margin: 20px 0;              /* space around the box */
 }
 
 .logo {
@@ -212,7 +218,7 @@ nav {
   font-size: 1rem;
   color: var(--white);
   white-space: nowrap;
-  background-color: var(--primary-color);
+  background-color: lightskyblue;
   border-radius: 5px;
   transition: 0.3s;
   cursor: pointer;
