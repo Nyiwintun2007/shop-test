@@ -643,4 +643,13 @@ nav {
     transform: translateY(-5px);
   }
 }
-
+.section__header {
+  background-color: #ffffff05;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(25px);
+}
+.section__header:hover {
+  box-shadow: 0 8px 30px rgba(0, 150, 136, 0.3);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
