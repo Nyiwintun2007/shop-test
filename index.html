@@ -46,9 +46,9 @@
         <i class="ri-arrow-down-s-line"></i>
       </a>
 <section class="section__container product__container" id="product">
-     <h6 class="section__header" style="font-size: 22px; color: #3498db; font-weight: bold; margin-bottom: 15px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">
+       <h6 id="animatedHeading" class="section__header" style="font-size: 20px;">
           Han Min Htet လျှပ်စစ်ပစ္စည်းဆိုင်မှ ရရှိနိုင်သောပစ္စည်းများ
-    </h6>
+      </h6>
   <div class="product__grid">
     
     <div class="product__card">
@@ -278,5 +278,25 @@
     <i class="ri-chat-3-fill"></i>
   </a>
 </div>
+     <script>
+        // Disable GSAP trial warning
+        gsap.config({ trialWarn: false });
+
+        // Define color array (fixed invalid characters like “ ” and typos)
+        const colorArray = [
+            "#B01E68", "#F49D1A", "#DC3535", "#B01E68",
+            "#C539B4", "#852999", "#EB6440", "#432C7A",
+            "#3E6D9C", "#54B435"
+        ].reverse();
+
+        // Animate the h6 heading color
+        gsap.to("#animatedHeading", {
+            duration: 1.5,
+            repeat: -1,
+            repeatDelay: 0.5,
+            yoyo: true,
+            keyframes: colorArray.map(color => ({ color }))
+        });
+    </script>
   </body>
 </html>
