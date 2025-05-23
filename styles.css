@@ -5,7 +5,7 @@
   --text-dark: #171717;
   --text-light: #737373;
   --extra-light: #f4f6f5;
-  --white: #ffffff;
+  --white: #505050;
   --max-width: 1200px;
   --header-font: "Merriweather", serif;
 }
@@ -17,18 +17,26 @@
 }
 
 .section__container {
+  background-color: #ffffff05;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter:blur(25px);
   max-width: var(--max-width);
   margin: auto;
   padding: 5rem 1rem;
 }
 
-.section__header {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-  font-weight: 600;
-  font-family: var(--header-font);
-  color: var(--primary-color);
-  background: lightgrey;
+
+
+/* Animation keyframes */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section__description {
@@ -63,7 +71,7 @@ body {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(135, 243, 255);
+  background-color: rgb(255, 255, 255);
 }
 
 nav {
@@ -593,65 +601,47 @@ nav {
 .floating-contact a:hover {
   background-color: #0056b3;
 }
-.section__description {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.8;
-  font-weight: 500;
-  background: lightblue;
-  padding: 20px;
-  border-left: 6px solid #007bff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+.section__description.in-view {
+  border-left-color: #28a745; /* Change color when in view */
+  background: linear-gradient(120deg, #e0f7e9 0%, #c7f2d8 100%);
 }
 
-.section__description:hover {
-  transform: scale(1.02);
+.section__description.clicked {
+  border-left-color: #ffc107; /* Change color when clicked */
+  background: linear-gradient(120deg, #fff7e0 0%, #fff3c7 100%);
 }
-.scroll-down {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  z-index: 10;
+#view-products-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff5a5f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
-.scroll-down i {
-  animation: bounce 2s infinite;
+#view-products-btn:hover {
+  background-color: #e04e53;
 }
-
-.scroll-down i:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.scroll-down i:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
+@media (min-width: 768px) {
+  #view-products-btn {
+    display: none; /* Only show on small screens */
   }
 }
 .section__header {
+  width: auto;
+  height: auto;
   background-color: #ffffff05;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  color: rgb(41, 48, 181);
+  font-family: sans-serif;
 }
-.section__header:hover {
-  box-shadow: 0 8px 30px rgba(0, 150, 136, 0.3);
-  transform: scale(1.02);
-  transition: all 0.3s ease;
-}
+ 
