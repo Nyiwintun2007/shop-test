@@ -28,6 +28,7 @@
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--primary-color);
+  background: light-blue;
 }
 
 .section__description {
